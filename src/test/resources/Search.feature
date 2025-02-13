@@ -5,7 +5,6 @@ Feature: SearchAndFilter_Screen
     Given I navigate to url
     When I search for "Ford F-150"
     Then I capture the total number of search results
-     #there is a bug it First result contains Ford F150
     And I verify that the first result contains "Ford F-150"
 
 
