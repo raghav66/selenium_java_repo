@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<!--<test name="local_Test">
+		<parameter name="browserName" value="Chrome" />
+		<parameter name="clientName" value="rb" />
+		<parameter name="executionEnv" value="production" />
+		<parameter name="tagName" value="@rb" />
+		<classes>
+			<class name="com.rb.runner.SanityRunnerTest"/>
+		</classes>
+	</test>-->
+	
+	<test name="Production_Sanity">
+		<parameter name="browserName" value="${browserName}" />
+		<parameter name="clientName" value="${clientName}" />
+		<parameter name="executionEnv" value="${executionEnv}" />
+		<parameter name="tagName" value="${tagName}" />
+		<classes>
+			<class name="com.rb.runner.SanityRunnerTest"/>
+		</classes>
+	</test>
+</suite>
