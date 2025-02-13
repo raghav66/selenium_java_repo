@@ -40,35 +40,7 @@ public class BasePage {
     }
 
 
-    /*public void launchApp() {
-        try {
-            // Fetch execution environment safely
-            String executionEnv = Optional.ofNullable(params)
-                    .map(GlobalParams::getExecutionEnv)
-                    .map(String::toLowerCase)
-                    .orElseThrow(() -> new IllegalStateException("Execution environment is not set."));
-
-            // Construct URL key
-            String urlKey = "pwa_" + executionEnv + "_url";
-            utils.log().info("Url Key: " + urlKey);
-
-            // Fetch URL safely from PropertyManager
-            String url = Optional.ofNullable(PropertyManager.getProps())
-                    .map(props -> props.get(urlKey))
-                    .filter(u -> !u.isEmpty()) // Ensure non-null and non-empty URL
-                    .orElseThrow(() -> new IllegalStateException("URL is missing or empty for key: " + urlKey));
-
-            // Navigate to the URL
-            utils.log().info("Navigating to URL: " + url);
-            driver.navigate().to(url);
-            utils.log().info("Successfully navigated to URL.");
-
-        } catch (Exception e) {
-            utils.log().error("Error launching app: " + e.getMessage(), e);
-            throw e; // Re-throwing to ensure the failure is properly handled
-        }
-    }*/
-
+   
 
     public void navigateToUrlBasedOnEnvironment() {
         String executionEnv = params.getExecutionEnv().toLowerCase();

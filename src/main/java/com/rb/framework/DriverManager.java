@@ -85,7 +85,6 @@ public class DriverManager {
                     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
                     utils.log().info("Default Chrome driver is launched");
                 }
-                        //utils.log().info("Path of Driver Executable is not Set for any Browser");
             }
             if (driver == null) {
                 throw new Exception("driver is null. ABORT!!!");

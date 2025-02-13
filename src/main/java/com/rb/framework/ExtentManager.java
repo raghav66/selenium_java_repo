@@ -62,8 +62,6 @@ public class ExtentManager {
         if (!folder.exists()) {
             folder.mkdirs(); // Create the folder if it does not exist
         }
-
-        // Construct the report path inside the date-time folder
         String reportPath = new File(props.getProperty("extent.reporter.spark.out")).getAbsolutePath();
 
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
